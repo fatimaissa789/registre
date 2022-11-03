@@ -1,0 +1,7 @@
+Options +FollowSymlinks
+RewriteEngine On
+ErrorDocument 403 /projetPHP/dist/pageexception/erreur403.html
+ErrorDocument 404 /projetPHP/dist/pageexception/erreur404.html
+
+RewriteRule	^(?!dist(/).*$) core.php
+RewriteRule	^(dist(/)$)  403 [R=403]
